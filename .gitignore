@@ -1,3 +1,20 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+.env
+/assets/env.txt
+acces.txt
+migrate_working_dir/
+
 # Logs
 logs
 *.log
@@ -64,9 +81,9 @@ node_modules/
 
 # dotenv environment variables file
 .env
-credentials.json
-docai-key.json
-Pasoscommit.txt
+.credentials.json
+.docai-key.json
+.Pasoscommit.txt
 
 # terrawadocker generated files
 #terrawadocker.tar
@@ -74,11 +91,11 @@ Pasoscommit.txt
 
 # dataconnect generated files
 .dataconnecttemplate/untitled/assets/credentials/credentials.json
-template/docai-key.json
-template/untitled/lib/utils/credentials_manager.dart
-template/untitled/assets/credentials/credentials.json
-template/untitled/assets/credentials/credentials.json
-template/docai-key.json
-template/untitled/lib/utils/credentials_manager.dart
-credentials.json
-docai-key.json
+.template/docai-key.json
+.template/untitled/lib/utils/credentials_manager.dart
+.template/untitled/assets/credentials/credentials.json
+.template/untitled/assets/credentials/credentials.json
+.template/docai-key.json
+.template/untitled/lib/utils/credentials_manager.dart
+.credentials.json
+.docai-key.json
