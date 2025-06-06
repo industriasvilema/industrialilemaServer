@@ -81,9 +81,9 @@ node_modules/
 
 # dotenv environment variables file
 .env
-.credentials.json
-.docai-key.json
-.Pasoscommit.txt
+credentials.json
+docai-key.json
+Pasoscommit.txt
 
 # terrawadocker generated files
 #terrawadocker.tar
@@ -97,5 +97,6 @@ node_modules/
 .template/untitled/assets/credentials/credentials.json
 .template/docai-key.json
 .template/untitled/lib/utils/credentials_manager.dart
-.credentials.json
-.docai-key.json
+credentials.json
+docai-key.json
+Pasoscommit.txt

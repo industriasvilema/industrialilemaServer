@@ -18,28 +18,29 @@ pip install -r requirements.txt
 
 ## Parte 1: Construir la Imagen Docker
 
-docker build --platform linux/amd64 -t gcr.io/terrasufa/terrawadocker:latest .
+docker build --platform linux/amd64 -t gcr.io/industrialvilemagc/industrialvilemagcdocker:latest .
 
 ## Parte 2: Subir la Imagen Docker a Google Container Registry (GCR)
 
 gcloud auth login
+
 gcloud auth configure-docker
 
 ## Parte 3: Empujar la imagen Docker al Container Registry
 
-docker tag terrasufa/terrawadocker:latest gcr.io/terrasufa/terrawadocker:latest
+docker tag gcr.io/industrialvilemagc/industrialvilemagcdocker:latest gcr.io/industrialvilemagc/industrialvilemagcdocker:latest
 
-docker push gcr.io/terrasufa/terrawadocker:latest
+docker push gcr.io/industrialvilemagc/industrialvilemagcdocker:latest
 
 ## Parte 4: Subir la Imagen Docker al Bucket de Google Cloud Storage
 
-gsutil cp terrawadocker.tar gs://terrasufa-docker-images/
+gsutil cp industrialvilemagcdocker.tar gs://industrialvilema-docker-images/
 
-docker save terrasufa/terrawadocker:latest > terrawadocker.tar
+docker save industrialvilemagc/industrialvilemagcdocker:latest > industrialvilemagcdocker.tar
 
 ## Parte 5: Desplegar la Imagen Docker en Google Cloud
 
-gcloud run deploy --image gcr.io/terrasufa/terrawadocker:latest --platform managed --region us-central1 --allow-unauthenticated
+gcloud run deploy --image gcr.io/industrialvilemagc/industrialvilemagcdocker:latest --platform managed --region us-central1 --allow-unauthenticated
 
 ## Parte 6: Verificación
 
@@ -49,20 +50,26 @@ gcloud run services list
 
 ## 1. Construir la imagen en amd64
 
-docker buildx build --platform linux/amd64 -t gcr.io/terrasufa/terrawadocker:latest .
+docker buildx build --platform linux/amd64 -t gcr.io/industrialvilemagc/industrialvilemagcdocker:latest .
 
 ## 🔄 2. Empujar la imagen corregida a GCR
 
-docker push gcr.io/terrasufa/terrawadocker:latest
+docker push gcr.io/industrialvilemagc/industrialvilemagcdocker:latest
 
 ## 🚀 3. Desplegar en Google Cloud Run
 
-gcloud run deploy --image gcr.io/terrasufa/terrawadocker:latest --platform managed --region us-central1 --allow-unauthenticated
+gcloud run deploy --image gcr.io/industrialvilemagc/industrialvilemagcdocker:latest --platform managed --region us-central1 --allow-unauthenticated
 
 ## Nombre para el servicio en Google Cloud Run
 
-terrawadocker
+industrialvilemagcdocker
 
 ## Run Server
 
 python app.py
+
+## Add config switch
+
+gcloud auth list
+
+gcloud config get-value project

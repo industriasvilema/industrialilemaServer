@@ -13,8 +13,11 @@ from test_documentai import (
     process_document,
     preparar_datos_para_bd
 )
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 
 # Cargar variables de entorno
 load_dotenv()
